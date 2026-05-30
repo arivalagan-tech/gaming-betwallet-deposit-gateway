@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Fund transfer</title>
+  <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+  <div class="deposit-wrpr">
+    
+    <!-- style="display: none;" -->
+
+    <div class="deposit--sec" >
+      <div class="deposit-head">
+        <button class="deposit--back-btn" style="background-image:url('./images/back-icon.svg')"></button>
+        <p class="deposit-heading">Deposit</p>
+      </div>
+  
+      <hr class="show-border">
+  
+      <div class="content--wrpr">
+        <ul class="tab-buttons">
+          <li><button class="active" data-target="#instant-li">Instant</button></li>
+          <li><button data-target="#alternate-li">Alternate</button></li>
+        </ul>
+  
+        <ul class="payment-buttons" id="instant-li">
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/upi-icon.png" alt=""></div>
+            <span>UPI</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/net-banking.svg" alt=""></div>
+            <span>Net banking</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/credit-card.svg" alt=""></div>
+            <span>Credit card</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/debit-card.png" alt=""></div>
+            <span>Debit card</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/wallet.svg" alt=""></div>
+            <span>Wallet</span>
+          </li>
+        </ul>
+        <ul class="payment-buttons" id="alternate-li" style="display: none;">
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/bank-transfer.svg" alt=""></div>
+            <span>Bank Transfer</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/gpay.svg" alt=""></div>
+            <span>Google Pay</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/phonepe.svg" alt=""></div>
+            <span>PhonePe</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/paytm.svg" alt=""></div>
+            <span>Paytm</span>
+          </li>
+          <li style="background-image: url('./images/check.png');">
+            <div class="pay--pui-icon"><img src="./images/upi-icon.png" alt=""></div>
+            <span>Wallet</span>
+          </li>
+        </ul>
+
+        <p class="payment-quet">How much would you like to add to your bank roll?</p>
+  
+        <div class="deposit--fieldset">
+          <lable class="enter-amount">Enter amount (₹)</lable>
+          <input type="text" id="inp-amount" name="amount" class="inp-amount">
+        </div>
+  
+        <button type="button" class="apply-coupon" id="apply"
+          style="background-image: url('./images/icon-percent.png'), url('./images/icon-r-chvron.png');">Apply
+          Coupon</button>
+
+          <button type="button" style="display:none;" class="apply-coupon special-coupen"  id="applied"
+          style="background-image: url('./images/icon-percent.png'), url('./images/close-icon.svg');">Special 10% <br> <span>Offer applied on this payment</span> </button>
+  
+        <button class="continue-button" onclick="showSecond()">CONTINUE</button>
+  
+        <div class="footer-content">
+          <img src="./images/footer-img.svg">
+          <p class="footer-text">This transaction is secured by our most trusted payment gateway.</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="apply--sec" style="display: none;">
+     
+  
+      <div class="apply-content--wrpr">
+          <div class="deposit-head">
+            <button class="deposit--back-btn" style="background-image:url('./images/back-icon.svg')"></button>
+            <p class="deposit-heading">Apply coupon</p>
+          </div>
+
+        <div class="searchbox">
+          <input type="text" id="search" placeholder="Search" >
+          <button class="search-btn" type="button" style="background-image: url('./images/search-icon.svg');"></button>
+        </div>
+
+        <div class="apply__cards">
+
+          <div class="apply__card">
+            <div class="apply__card_head">
+              <div class="apply__card_left">
+                <img src="./images/card-left.png" alt="">
+              </div>
+              <div class="apply__card_right">
+                <div class="apply__card_head_title">Get upto Rs. 100000 Deposit Bonus</div>
+                <div class="apply__card_head_desc">
+                  <p>Use code Special 10% & get 20% deposit bonus on above Rs. 300000</p>
+                  <p>Maximum Discount: Rs. 15.00</p>
+                </div>
+                <button class="apply__card_button" data-val="1" onclick="applycoupen(this)">Apply</button>
+              </div>
+            </div>
+            <div class="apply__card_content">
+              <h5 class="apply__card_content_title">Terms & conditions</h5>
+              <div class="apply__card_content_desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit,.</p>
+              </div>
+            </div>
+            <button class="apply__card_open" style="--apply-bg: url('./images/apply-bg.svg');"></button>
+          </div>
+
+          <div class="apply__card">
+            <div class="apply__card_head">
+              <div class="apply__card_left">
+                <img src="./images/card-left.png" alt="">
+              </div>
+              <div class="apply__card_right">
+                <div class="apply__card_head_title">Get upto Rs. 100000 Deposit Bonus</div>
+                <div class="apply__card_head_desc">
+                  <p>Use code Special 10% & get 20% deposit bonus on above Rs. 300000</p>
+                  <p>Maximum Discount: Rs. 15.00</p>
+                </div>
+                <button class="apply__card_button" data-val="2" onclick="applycoupen(this)">Apply</button>
+              </div>
+            </div>
+            <div class="apply__card_content">
+              <h5 class="apply__card_content_title">Terms & conditions</h5>
+              <div class="apply__card_content_desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit,.</p>
+              </div>
+            </div>
+            <button class="apply__card_open" style="--apply-bg: url('./images/apply-bg.svg');"></button>
+          </div>
+
+          <div class="apply__card">
+            <div class="apply__card_head">
+              <div class="apply__card_left">
+                <img src="./images/card-left.png" alt="">
+              </div>
+              <div class="apply__card_right">
+                <div class="apply__card_head_title">Get upto Rs. 100000 Deposit Bonus</div>
+                <div class="apply__card_head_desc">
+                  <p>Use code Special 10% & get 20% deposit bonus on above Rs. 300000</p>
+                  <p>Maximum Discount: Rs. 15.00</p>
+                </div>
+                <button class="apply__card_button" data-val="3" onclick="applycoupen(this)">Apply</button>
+              </div>
+            </div>
+            <div class="apply__card_content">
+              <h5 class="apply__card_content_title">Terms & conditions</h5>
+              <div class="apply__card_content_desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrudLorem ipsum dolor sit amet, consectetur adipiscing elit,.</p>
+              </div>
+            </div>
+            <button class="apply__card_open" style="--apply-bg: url('./images/apply-bg.svg');"></button>
+          </div>
+
+        </div>
+        
+  
+        <div class="footer-content">
+          <img src="./images/footer-img.svg">
+          <p class="footer-text">This transaction is secured by our most trusted payment gateway.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
+  <script>
+    jQuery(function($) {
+      $('body').on('click', '.apply__card_open', function() {
+        $(this).closest('.apply__card').find('.apply__card_content').slideToggle();
+      });
+    });
+
+    $('.tab-buttons button').click(function(){
+      $(this).closest('li').siblings().find('button').removeClass('active');
+      $(this).addClass('active');
+
+   if($(this).attr('data-target') == '#instant-li') {
+     $('#instant-li').show();
+     $('#alternate-li').hide();
+   } else {
+     $('#instant-li').hide();
+     $('#alternate-li').show();
+   }
+
+
+});
+
+
+$('.payment-buttons li').click(function(){
+      $(this).siblings().removeClass('active');
+   
+      $(this).addClass('active');
+});
+
+function showSecond() {
+  $('.apply--sec').css('display','block');
+  $('.deposit--sec').css('display','none');
+}
+
+  function applycoupen(val){
+  var coupenValue = $(val).data("val");
+  
+  $('.apply--sec').css('display','none');
+  $('.deposit--sec').css('display','block');
+  if(coupenValue != ''){
+  $('#apply').hide();
+  $('#applied').show();
+  }
+}
+
+
+  </script>
+
+</body>
+</html>

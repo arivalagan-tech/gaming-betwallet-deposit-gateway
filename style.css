@@ -1,0 +1,507 @@
+body {margin: 0;}
+.deposit-wrpr * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Just for reff */
+@font-face {
+    font-family: 'Inter';
+    src: url(Arimo,Inter/Inter/static/Inter-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url(Arimo,Inter/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'Verdana';
+    src: url(verdana/verdana.ttf);
+}
+
+.deposit-head{
+    min-height: 56px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.deposit-wrpr {
+    background: #262626;
+    padding: 0 16px 80px;
+}
+
+.deposit--back-btn{
+    all:unset;
+    background-repeat: no-repeat;
+    background-position: center center;
+    pointer-events: all;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
+
+.deposit-heading{
+    flex: 1 1 auto;
+    text-align: center;
+    font-family: 'Oleo Script';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 30px;
+
+color: #FFFFFF;
+}
+
+.show-border{
+    background: #262626;
+    box-shadow: inset 0px -0.5px 0.5px #5C5C5C, inset 0px 1px 0.25px #000000;
+    border-radius: 4px;
+    border: 0;
+    height: 3px;
+}
+.tab-buttons{
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 0;
+    border: 1px solid #7FF800;
+    border-radius: 8px;
+    overflow: hidden;
+    list-style: none;
+    display: flex;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 12px;
+line-height: 18px;
+/* identical to box height */
+
+text-align: center;
+
+color: #7FF800;
+
+}
+
+.tab-buttons li{
+    flex: 1 1 50%;
+}
+
+.tab-buttons li button{
+    all: unset;
+    pointer-events: all;
+    cursor: pointer;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+/* identical to box height */
+
+    text-align: center;
+    color: #7FF800;
+    text-align: center;
+    min-height: 50px;
+    padding: 5px;
+
+    text-align: center;
+    min-height: 30px;
+    display: block;
+    padding: 5px;
+    width: 100%;
+}
+
+.tab-buttons button.active{
+    background: #7FF800;
+    color: #060809;
+}
+
+.content--wrpr {
+    padding-top: 24px;
+}
+
+.payment-buttons {
+    background: #060809;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 12px 0 24px;
+
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.payment-buttons li {
+    background: #2C2C2C;
+    box-shadow: 0px 4px 2px #000000, inset 0px 1px 1px #525252;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px;
+
+}
+.payment-buttons li + li {
+    margin-top: 5px;    
+}
+.payment-buttons li .pay--pui-icon {
+    width: 42px;
+    text-align: left;
+}
+.payment-buttons li span {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    /* identical to box height */
+
+    text-align: center;
+    margin-left: 12px;
+    display: inline-block;
+    color: #FFFFFF;
+}
+
+.payment-quet{
+    font-family: 'Verdana';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+
+}
+
+.enter-amount{
+    font-family: 'Verdana';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+
+color: #FFFFFF;
+}
+
+.inp-amount{
+    background: #303030;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    outline: none;
+    min-height: 50px;
+    padding: 10px;
+    border: 0;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.apply-coupon {
+    background: #000000;
+    border: 1px solid #FCE403;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;  
+    color: #FCE403;
+    margin-top: 12px;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 34px;
+    background-repeat: no-repeat, no-repeat;
+    background-position: 10px center, calc(100% - 15px) center;
+}
+
+.continue-button {
+    display: block;
+    width: 100%;
+    margin: 32px auto 0;
+    max-width: 188px;
+    min-height: 50px;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    border: 0;
+    background: #7FF800;
+    border-radius: 64px;
+}
+
+.deposit--fieldset {
+    margin-top: 25px;
+}
+
+.footer-content{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.footer-content .footer-text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.payment-buttons li:not(.active) {
+    background-image: none !important;
+}
+.payment-buttons li {
+    background-repeat: no-repeat !important;
+    background-position: calc(100% - 15px) center !important;
+}
+
+.payment-buttons .active {
+    background: #0D0D0D;
+    box-shadow: inset 0px 0px 2px #7FF800;
+    border-radius: 8px;
+    position: relative;
+}
+.payment-buttons .active:after {
+    content: '';
+    background: linear-gradient(90deg, rgba(127, 248, 0, 0) 0%, rgba(127, 248, 0, 0.924654) 45.6%, #7FF800 50.83%, rgba(127, 248, 0, 0.931277) 55.9%, rgba(127, 248, 0, 0) 100%);
+    filter: blur(3.5px);
+    border-radius: 135px;
+    position: absolute;
+    width: 113px;
+    height: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.payment-buttons .active:before {
+    content: '';
+    background: linear-gradient(90deg, rgba(127, 248, 0, 0) 0%, rgba(127, 248, 0, 0.924654) 45.6%, #7FF800 50.83%, rgba(127, 248, 0, 0.931277) 55.9%, rgba(127, 248, 0, 0) 100%);
+    border-radius: 135px;
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.payment-buttons .active span {
+    color: #7FF800;
+}
+
+.search-btn {
+    all: unset;
+    pointer-events: all;
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    right: 12px;
+    top: 11px;
+}
+
+.searchbox{
+    position: relative;
+
+}
+
+.searchbox input{
+    height: 40px;
+    background: #303030;
+    outline: none;
+    border: 0;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    padding: 10px;
+
+}
+
+.apply-content--wrpr {
+    padding-top: 24px;
+}
+
+/* accordian */
+.apply__cards {
+    display: block;
+    width: 100%;
+    margin-top: 12px;
+  }
+  .apply__card {
+    background: #000000;
+    border: 1px solid #171717;
+    border-radius: 10px;
+    padding: 5px;
+    position: relative;
+  }
+  .apply__card + .apply__card {
+    margin-top: 30px;
+  }
+  .apply__card_head {
+    position: relative;
+    display: flex;
+  }
+  .apply__card_left {
+    display: block;
+  }
+  .apply__card_left img {
+    display: block;
+  }
+  .apply__card_right {
+    position: relative;
+    margin-left: 1px;
+    border: 0;
+    border-radius: 8px;
+    padding: 5px 10px;
+    background: #262626;
+  }
+  .apply__card_right::after, .apply__card_right::before {
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    left: 0;
+    top: 0;
+    transform: translate(-50%, -50%);
+    background: #000000;
+    border: 0;
+    border-radius: 50%;
+  }
+  .apply__card_right::after {
+    top: 100%;
+  }
+  .apply__card_head_title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+  }
+  .apply__card_head_desc p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .apply__card_head_desc p + p{
+    margin-top: 8px;
+  }
+  .apply__card_button {
+    background: #000000;
+    border: 0.5px solid #7FF800;
+    border-radius: 50px;
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    text-transform: uppercase;
+    color: #7FF800;
+    width: 72px;
+    height: 24px;
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+  }
+  .apply__card_content {
+    border: 0.5px solid #2C2B2B;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 4px;
+    position: relative;
+    z-index: 2;
+    display: none;
+  }
+  .apply__card_content_title {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 16px;
+    color: #FFFFFF;   
+    margin-bottom: 10px;
+  }
+  .apply__card_content_desc p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  .apply__card_content_desc p + p {
+    margin-top: 8px;
+  }
+.apply__card_open {
+    background-color: transparent;
+    position: absolute;
+    background-image: var(--apply-bg);
+    width: 72px;
+    height: 19px;
+    top: calc(100% + 0.4px);
+    background-repeat: no-repeat;
+    border: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-position: center;
+}
+
+.apply__card_open::after, .apply__card_open:after {
+    content: '';
+    background-color: transparent;
+    position: absolute;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACSSURBVHgBlY/BDcJADATHFwm+lEAHpAU6ogLuQgOUQgm0kFJ4IeCBsRFIEM4i8cta74xkyRcOKvS7OR0TJp/Z0LBKCEtRyvZKHgt33k3sbW2TzFibpB8rcfhu3SdjrHhYlIXeOKK09k6J3hnCRTjJ+/hPUoM9l89SJIngH0FN0lgWwVXBUPJqVeFQ8CXxUgD7PABy2l6SB/u6MwAAAABJRU5ErkJggg==);
+    width: 16px;
+    height: 9px;
+    top: 50%;
+    background-repeat: no-repeat;
+    border: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+.apply__card_content[style='display: block;'] ~ *::after,
+.apply__card_content[style='display: block;'] ~ *:after {
+    transform: translate(-50%, -60%) rotateX(-180deg);
+}
+
+.apply-coupon span{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 10px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
